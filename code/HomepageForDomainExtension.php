@@ -2,6 +2,7 @@
 
 namespace Twohill\HomepageForDomain;
 
+use Page;
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\Core\Extension;
 use SilverStripe\Forms\TextField;
@@ -80,7 +81,7 @@ class HomepageForDomainExtension extends Extension
      */
     public static function generate_homepage_domain_map()
     {
-        $domainSpecificHomepages = Versioned::get_by_stage(\Page::class, 'Live', "\"HomepageForDomain\" != ''",
+        $domainSpecificHomepages = Versioned::get_by_stage(Page::class, 'Live', "\"HomepageForDomain\" != ''",
             "\"URLSegment\" ASC");
         if (!$domainSpecificHomepages) {
             return false;
