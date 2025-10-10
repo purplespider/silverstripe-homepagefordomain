@@ -3,13 +3,13 @@
 namespace Twohill\HomepageForDomain;
 
 use SilverStripe\Core\ClassInfo;
+use SilverStripe\Core\Extension;
 use SilverStripe\Forms\TextField;
-use SilverStripe\ORM\DataExtension;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Versioned\Versioned;
 
-class HomepageForDomainExtension extends DataExtension
+class HomepageForDomainExtension extends Extension
 {
 
     /**
